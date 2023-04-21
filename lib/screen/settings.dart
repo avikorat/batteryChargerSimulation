@@ -18,11 +18,11 @@ class Settings extends StatefulWidget {
 
 String selectedValue = "";
 List<String> batteryMode = <String>[
-  'Profile-1 AGM',
   "Profile-2 ATB",
   'Profile-3 GEL',
   "Profile-4 Lithium",
-  "Profile-5 WET"
+  "Profile-5 WET",
+  'Profile-1 AGM',
 ];
 
 class _SettingsState extends State<Settings> {
