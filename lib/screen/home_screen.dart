@@ -21,7 +21,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final String deviceId = "20:10:4B:80:64:C5";
 
   bool connected = false;
 
@@ -141,63 +140,6 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
-// ********************* Connect with already connected devices *************************
-
-  // void connectToDevice() async {
-  //   try {
-  //     List<BluetoothDevice> devices = await flutterBlue.connectedDevices;
-  //     for (BluetoothDevice d in devices) {
-  //       if (d.id.toString() == deviceId) {
-  //         device = d;
-  //         connected = true;
-  //         discoverServices();
-  //       }
-  //     }
-  //   } catch (e) {
-  //     print(': $e');
-  //     return;
-  //   }
-
-  //   if (!connected) {
-  //     try {
-  //       await flutterBlue.stopScan();
-
-  //       flutterBlue.scan(timeout: const Duration(seconds: 6)).listen((event) {
-  //         if (event.device.id.toString() == deviceId) {
-  //           device = event.device;
-  //           connectDevice();
-  //         }
-  //       });
-  //     } catch (error) {
-  //       print(error);
-  //     }
-  //   }
-  // }
-
-// ********************* Connect with new devices *************************
-
-  // void connectDevice() async {
-  //   try {
-  //     var response = await device?.connect();
-  //     flutterBlue.stopScan();
-  //     connected = true;
-  //     discoverServices();
-  //   } catch (e) {
-  //     print('Error connecting to device: $e');
-  //     return;
-  //   }
-  // }
-
-// ********************* Discover services of connected device *************************
-
-  // void discoverServices() async {
-  //   try {
-  //     List<BluetoothService> _services = await device!.discoverServices();
-  //     context.read<ServiceBloc>().add(UpdateServiceList(_services));
-  //   } catch (e) {
-  //     print('Error discovering services: $e');
-  //   }
-  // }
 
   @override
   void initState() {

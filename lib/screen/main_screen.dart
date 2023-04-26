@@ -157,9 +157,15 @@ class _MainScreenState extends State<MainScreen> {
                     annotations: <GaugeAnnotation>[
                       GaugeAnnotation(
                           widget: Container(
-                              child: Text("SOC: ${data.toStringAsFixed(0)}%",
-                                  style: TextStyle(
-                                      fontSize: 20, color: Colors.blue))),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text("SOC: ${data.toStringAsFixed(0)}%",
+                                      style: TextStyle(
+                                          fontSize: 20, color: Colors.blue)),
+                                          Icon(Icons.bluetooth, color: Colors.blue,)
+                                ],
+                              )),
                           angle: 90,
                           positionFactor: 0.7)
                     ])
